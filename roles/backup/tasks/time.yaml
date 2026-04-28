@@ -1,0 +1,20 @@
+"ansible_date_time": {
+        "date": "2018-10-25",
+        "day": "25",
+        "epoch": "1540469324",
+        "hour": "12",
+        "iso8601": "2018-10-25T12:08:44Z",
+        "iso8601_basic": "20181025T120844109754",
+        "iso8601_basic_short": "20181025T120844",
+        "iso8601_micro": "2018-10-25T12:08:44.109968Z",
+        "minute": "08",
+        "month": "10",
+        "second": "44",
+        "time": "12:08:44",
+        "tz": "UTC",
+        "tz_offset": "+0000",
+        "weekday": "Thursday",
+        "weekday_number": "4",
+        "weeknumber": "43",
+        "year": "2018"
+    }

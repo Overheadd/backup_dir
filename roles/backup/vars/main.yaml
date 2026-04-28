@@ -1,0 +1,5 @@
+---
+backup_dir: /home/sgorod/OptCheck.yaml
+backup_location: /home/sgorod/backup
+time: "{{ ansible_date_time.day }}.{{ ansible_date_time.month }}.{{ ansible_date_time.year }}:{{ ansible_date_time.hour }}.{{ ansible_date_time.minute }}"
+
