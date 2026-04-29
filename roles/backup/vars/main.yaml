@@ -4,4 +4,6 @@ backup_src: /home/sgorod/OptCheck.yaml #откуда будет делаться
 backup_dest: /home/sgorod/backup #куда будет делаться бэкап
 time: "{{ ansible_date_time.day }}.{{ ansible_date_time.month }}.{{ ansible_date_time.year }}:{{ ansible_date_time.hour }}.{{ ansible_date_time.minute }}.{{ ansible_date_time.second }}" #установка времени в порядке котором я захотел
 owner_dir: sgorod #владелец файла/папки
+mode_dir: '0755' #права на папку
 owner_archive: sgorod #владелец архива
+mode_archive: '0755' #права на архив
