@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: all #на каких хостах выполнять: на всех
 
-  roles:
-    - backup
+  roles: #использовать роли
+    - backup #роль backup

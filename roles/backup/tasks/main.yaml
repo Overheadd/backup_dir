@@ -1,4 +1,8 @@
 ---
-- name: Set time
-  ansible.builtin.include_tasks:
-    file: time.yaml
+- name: creating directory or file #имя задачи
+  ansible.builtin.include_tasks: #название модуля
+    file: create_dir.yaml #аргумент модуля
+
+- name: archiving #имя задачи
+  ansible.builtin.include_tasks: #название модуля
+    file: archiving.yaml #аргумент модуля
