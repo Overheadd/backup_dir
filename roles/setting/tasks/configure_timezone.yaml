@@ -1,0 +1,6 @@
+---
+- name: configure timezone  # Название задачи (конфигурация часового пояса)
+  community.general.timezone:  # Модуль для конфигурации часового пояса
+    name: "Europe/Moscow"  # Название часового пояса
+    hwclock: UTC  # Настройка RTC (Real Time Clock) — часы, которые встроены в материнскую плату
+  become: true  # Запускать задачу от имени рута (root)

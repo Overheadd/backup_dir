@@ -1,8 +1,8 @@
 ---
-- name: creating directory or file #имя задачи
-  ansible.builtin.include_tasks: #название модуля
-    file: create_dir.yaml #аргумент модуля
+- name: creating directory or file  # Имя задачи
+  ansible.builtin.include_tasks:  # Название модуля
+    file: create_dir.yaml  # Аргумент модуля
 
-- name: archiving #имя задачи
-  ansible.builtin.include_tasks: #название модуля
-    file: archiving.yaml #аргумент модуля
+- name: archiving  # Имя задачи
+  ansible.builtin.include_tasks:  # Название модуля
+    file: archiving.yaml  # Аргумент модуля

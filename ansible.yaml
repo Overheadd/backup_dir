@@ -1,5 +1,8 @@
 ---
-- hosts: all #на каких хостах выполнять: на всех
-
-  roles: #использовать роли
-    - backup #роль backup
+- hosts: all
+  roles:  # Использовать роли
+    - role: setting  # Роль setting
+      tags: ["setup", "configuration"]  # Тег для настройки системы
+    
+    - role: backup  # Роль backup
+      tags: ["work", "backup_logic"]  # Тег для выполнения бэкапа

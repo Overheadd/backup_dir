@@ -1,0 +1,13 @@
+---
+- name: reboot crontab  # Перезагрузка crontab
+  ansible.builtin.systemd:  # Модуль для управления системными службами
+    name: cron  # Сервис cron
+    state: restarted  # Перезагрузка сервиса
+  become: true  # Запускать задачу от имени рута (root)
+
+- name: setting the execution time  # Имя задачи (установка времени выполнения)
+  ansible.builtin.cron:  # Модуль для добавление задачи в crontab 
+    name: daily_backup  # Комменатрий
+    minute: "0"  # Когда будет выполняться (в 0 минут)
+    hour: "13"  # Когда будет выполняться (в 13 часов)
+    job: /usr/bin/ansible-playbook /home/sgorod/backup_dir/ansible.yaml  # Выполнение команды (в данном случае, запуск плейбука) 
