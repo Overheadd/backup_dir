@@ -1,8 +1,8 @@
 ---
-- name: creating directory or file  # Имя задачи
+- name: set timezone  # Имя задачи
   ansible.builtin.include_tasks:  # Название модуля
-    file: create_dir.yaml  # Аргумент модуля
+    file: configure_timezone.yaml  # Аргумент модуля
 
-- name: archiving  # Имя задачи
+- name: set crontab  # Имя задачи
   ansible.builtin.include_tasks:  # Название модуля
-    file: archiving.yaml  # Аргумент модуля
+    file: setup_crontab.yaml  # Аргумент модуля

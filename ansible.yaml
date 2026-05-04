@@ -6,3 +6,4 @@
     
     - role: backup  # Роль backup
       tags: ["work", "backup_logic"]  # Тег для выполнения бэкапа
+      
