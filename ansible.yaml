@@ -2,8 +2,8 @@
 - hosts: all
   roles:  # Использовать роли
     - role: setting  # Роль setting
-      tags: ["setup", "configuration"]  # Тег для настройки системы
+      tags: ["setting"]  # Тег для настройки системы
     
     - role: backup  # Роль backup
-      tags: ["work", "backup_logic"]  # Тег для выполнения бэкапа
+      tags: ["backup"]  # Тег для выполнения бэкапа
       

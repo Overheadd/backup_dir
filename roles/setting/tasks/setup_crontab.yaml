@@ -5,9 +5,14 @@
     state: restarted  # Перезагрузка сервиса
   become: true  # Запускать задачу от имени рута (root)
 
+- name: delete cron job  # Имя задачи (удаление задачи в кронтаб)
+  ansible.builtin.cron:  # Модуль для добавление задачи в crontab 
+    name: daily_backup  # Задача с данным комменатрием # НЕ МЕНЯТЬ!
+    state : absent  # Удаление задачи
+
 - name: setting the execution time  # Имя задачи (установка времени выполнения)
   ansible.builtin.cron:  # Модуль для добавление задачи в crontab 
-    name: daily_backup  # Комменатрий
+    name: daily_backup  # Комменатрий # НЕ МЕНЯТЬ!
     minute: "40"  # Когда будет выполняться (в 0 минут)
-    hour: "15"  # Когда будет выполняться (в 13 часов)
+    hour: "13"  # Когда будет выполняться (в 13 часов)
     job: /usr/bin/ansible-playbook /home/sgorod/backup_dir/ansible.yaml  # Выполнение команды (в данном случае, запуск плейбука) 
