@@ -10,7 +10,7 @@
     name: daily_backup  # Задача с данным комменатрием # НЕ МЕНЯТЬ!
     state : absent  # Удаление задачи
 
-- name: setting the execution time  # Имя задачи (установка времени выполнения)
+- name: set the execution time  # Имя задачи (установка времени выполнения)
   ansible.builtin.cron:  # Модуль для добавление задачи в crontab 
     name: daily_backup  # Комменатрий # НЕ МЕНЯТЬ!
     minute: "40"  # Когда будет выполняться (в 0 минут)

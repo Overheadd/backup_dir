@@ -1,8 +1,12 @@
 ---
 - name: set timezone  # Имя задачи
   ansible.builtin.include_tasks:  # Название модуля
-    file: configure_timezone.yaml  # Аргумент модуля
+    file: set_timezone.yaml  # Аргумент модуля
 
 - name: set crontab  # Имя задачи
   ansible.builtin.include_tasks:  # Название модуля
-    file: setup_crontab.yaml  # Аргумент модуля
+    file: set_crontab.yaml  # Аргумент модуля
+
+- name: set locale  # Имя задачи
+  ansible.builtin.include_tasks:  # Название модуля
+    file: set_locale.yaml  # Аргумент модуля
