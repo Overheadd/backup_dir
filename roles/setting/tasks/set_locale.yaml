@@ -2,7 +2,6 @@
 - name: set locale.gen  # Название задачи (настройка locale.gen)
   community.general.locale_gen:  # Модуль для настройки locale.gen
     name: "en_GB.UTF-8"  # раскомментировать данную строчку в /etc/locale.gen
-  become: true  # Запускать задачу от имени рута (root)
 
 - name: set locale  # Название задачи (настройка locale)
   ansible.builtin.template:  # Модуль для настройки locale
@@ -11,5 +10,4 @@
     owner: root  # Владелец файла
     group: root  # Группа владельца файла
     mode: '0644'  # Права на файл
-  become: true  # Запускать задачу от имени рута (root)
   notify: "reboot"

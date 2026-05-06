@@ -1,4 +1,4 @@
 ---
 - name: reboot  # Имя задачи (перезагрузка)
   ansible.bultin.reboot:  # Модуль для перезагрузки системы
-  msg: "Rebooting..."  
+    msg: "Rebooting..."  

@@ -10,3 +10,4 @@
 - name: set locale  # Имя задачи
   ansible.builtin.include_tasks:  # Название модуля
     file: set_locale.yaml  # Аргумент модуля
+  become: true  # Запускать все модули в задаче от имени рута (root)
