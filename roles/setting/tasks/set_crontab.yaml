@@ -15,4 +15,5 @@
     name: daily_backup  # Комменатрий # НЕ МЕНЯТЬ!
     minute: "40"  # Когда будет выполняться (в 0 минут)
     hour: "13"  # Когда будет выполняться (в 13 часов)
-    job: "/usr/bin/ansible-playbook /home/sgorod/backup_dir/ansible.yaml --tags backup -c local"  # Выполнение команды (в данном случае, запуск плейбука) 
+    job: "cd /home/sgorod/backup_dir && /usr/bin/ansible-playbook /home/sgorod/backup_dir/ansible.yaml --tags backup >> /home/sgorod/backup_dir/log"  # Выполнение команды (в данном случае, запуск плейбука) 
+    
