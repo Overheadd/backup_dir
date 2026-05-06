@@ -12,3 +12,4 @@
     group: root  # Группа владельца файла
     mode: '0644'  # Права на файл
   become: true  # Запускать задачу от имени рута (root)
+  notify: "reboot"
